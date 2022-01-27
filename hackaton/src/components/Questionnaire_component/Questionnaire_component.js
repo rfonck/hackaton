@@ -4,6 +4,7 @@ import Profil from '../Profil/Profil';
 import Modalités from '../Modalités/Modalités';
 import Moyens_de_transport from '../Moyens_de_transport/Moyens_de_transport';
 import Resultat_component from '../Resultat_component/Resultat_component';
+import Equipements from '../Equipements/Equipements';
 
 class Questionnaire_component extends React.Component {
   constructor(props) {
@@ -57,6 +58,11 @@ class Questionnaire_component extends React.Component {
         </Moyens_de_transport>
         }
         {this.state.page==3&&
+        <Equipements
+        handleValidate = {this.handleValidate}>
+        </Equipements>
+        }
+        {this.state.page==4&&
         <Resultat_component
         handleValidate = {this.handleValidate}>
         </Resultat_component>
