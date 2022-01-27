@@ -29,8 +29,7 @@ class Equipements extends React.Component {
   render() {
     return(
       <div className="box-centre">
-        <label>Combien d'appareil électroménagers possédez-vous ?</label>
-        <input type="number"/>
+        <h2>Sélectionnez vos appareils ménagers :</h2>
         
         <div className="gallery">
           { this.constructor.elements.map(function(element) {
