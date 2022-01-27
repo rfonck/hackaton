@@ -7,6 +7,17 @@ import "../styles/box.css";
 import "../styles/home.css";
 
 class Modalités extends React.Component{
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      handleValidate: props.handleValidate
+    }
+  }
+  onTrigger = () => {
+    this.state.handleValidate()
+  }
+
   render(){
     return(
       <div className='Profil background box-centre texte-centre'>

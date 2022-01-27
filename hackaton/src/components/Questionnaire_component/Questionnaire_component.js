@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Profil from '../Profil/Profil';
 import Modalités from '../Modalités/Modalités';
+import Moyens_de_transport from '../Moyens_de_transport/Moyens_de_transport';
+import Resultat_component from '../Resultat_component/Resultat_component';
 
 class Questionnaire_component extends React.Component {
   constructor(props) {
@@ -48,6 +50,16 @@ class Questionnaire_component extends React.Component {
         <Modalités
         handleValidate = {this.handleValidate}>
         </Modalités>
+        }
+        {this.state.page==2&&
+        <Moyens_de_transport
+        handleValidate = {this.handleValidate}>
+        </Moyens_de_transport>
+        }
+        {this.state.page==3&&
+        <Resultat_component
+        handleValidate = {this.handleValidate}>
+        </Resultat_component>
         }
         {/* <div className='bouton-gris-hover box-en-bas'>
           <button onClick={this.handleValidate} style={{width:100, height:30}}></button>
