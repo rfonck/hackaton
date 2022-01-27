@@ -25,6 +25,7 @@ class Modalités extends React.Component{
         <br/>
         <div className='radios-onsite'>
           number of on site days per week
+          <input type='radio' name='onsite-days' value='0'/><label>0</label>
           <input type='radio' name='onsite-days' value='1'/><label>1</label>
           <input type='radio' name='onsite-days' value='2'/><label>2</label>
           <input type='radio' name='onsite-days' value='3'/><label>3</label>
