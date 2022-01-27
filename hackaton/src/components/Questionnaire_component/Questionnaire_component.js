@@ -6,10 +6,10 @@ class Questionnaire_component extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      typeProfil: '',
-      regionTravail: '',
-      lieuHabitation: '',
-      lieuTravail: ''
+      typeProfil: 'commercial',
+      regionTravail: 'france',
+      lieuHabitation: 'ville',
+      lieuTravail: 'ville'
     }
   }
 
@@ -28,13 +28,13 @@ class Questionnaire_component extends React.Component {
     return(
       <div className="questionnaire_component box-centre">
         <Profil 
-            typeProfil = {this.state.typeProfil}>
+            typeProfil = {this.state.typeProfil}
             regionTravail = {this.state.regionTravail}
             lieuHabitation = {this.state.lieuHabitation}
             lieuTravail = {this.state.lieuTravail}
-            handleCallbackProfil = {this.handleCallbackProfil}
+            handleCallbackProfil = {this.handleCallbackProfil}>
         </Profil>
-        dzdzd {this.state.typeProfil}
+        <p>{this.state.lieuHabitation}</p>
       </div>
     )
   }

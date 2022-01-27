@@ -11,34 +11,13 @@ class Profil extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      typeProfil: this.props.typeProfil,
-      regionTravail: this.props.regionTravail,
-      lieuHabitation: this.props.lieuHabitation,
-      lieuTravail: this.props.lieuTravail,
-      isValid: true
+      typeProfil: props.typeProfil,
+      regionTravail: props.regionTravail,
+      lieuHabitation: props.lieuHabitation,
+      lieuTravail: props.lieuTravail,
+      isValid: false
     }
   }
-
-   handleSubmit = (e) => {
-
-    e.preventDefault();
-  
-    var profil = document.getElementById('profil')
-    var profil_value = profil.options[profil.selectedIndex].value;
-
-    var region = document.getElementById('region')
-    var region_value = region.options[region.selectedIndex].value;
-  
-    var habitation = document.getElementById('habitation')
-    var habitation_value = habitation.options[habitation.selectedIndex].value;
-  
-    var travail = document.getElementById('travail')
-    var travail_value = travail.options[travail.selectedIndex].value;
-  
-  
-  }
-
-
 
   changeTypeProfil = () => {
     var valeur;
@@ -70,33 +49,31 @@ class Profil extends React.Component {
    
 
   onTrigger = (event) => {
-    console.log("hio", this.state.typeProfil)
-
     if(this.state.typeProfil !== '' &&
       this.state.regionTravail !== '' &&
       this.state.lieuHabitation !== '' &&
       this.state.lieuTravail !== '')
     {
-        console.log("hi")
         this.state.isValid = true;
+        console.log(this.state.typeProfil, this.state.regionTravail, this.state.lieuHabitation, this.state.changeLieuTravail)
     }
 
     if (this.state.isValid) {
-      console.log("okay")
+      console.log("ça marche")
       this.props.handleCallbackProfil(
         this.state.typeProfil,
         this.state.regionTravail,
         this.state.lieuHabitation,
         this.state.lieuTravail);
-    }
-
-    else{
+        event.preventDefault();
+    } else {
+      console.log(this.state.typeProfil, this.state.regionTravail, this.state.lieuHabitation, this.state.changeLieuTravail)
       alert("error message")
     }
   }
 
   render() {
-    const {data} = this.state;
+    const {data} = this.state
     return(
       <div className="Profil background box-centre texte-centre">
     <div className='texte-titre texte-gris'>Profil</div>
@@ -154,7 +131,7 @@ class Profil extends React.Component {
           <option value="ville">Ville</option>
           <option value="peripherique">Périphérie</option>
           <option value="campagne">Campagne</option>
-
+          
         </select>
         <p></p>
         </div>
@@ -169,6 +146,7 @@ class Profil extends React.Component {
           </button>
         </div>
         <div id="nouveau"> ### composant suivant ### </div>
+        <div>salut  {data}</div>
       </form>
   </div>
     );
