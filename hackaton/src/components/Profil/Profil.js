@@ -15,7 +15,8 @@ class Profil extends React.Component {
       regionTravail: props.regionTravail,
       lieuHabitation: props.lieuHabitation,
       lieuTravail: props.lieuTravail,
-      isValid: false
+      isValid: false,
+     handleValidate: props.handleValidate
     }
   }
 
@@ -60,6 +61,8 @@ class Profil extends React.Component {
 
     if (this.state.isValid) {
       console.log("ça marche")
+      console.log("page : " + this.state.page)
+      this.state.handleValidate();
       this.props.handleCallbackProfil(
         this.state.typeProfil,
         this.state.regionTravail,

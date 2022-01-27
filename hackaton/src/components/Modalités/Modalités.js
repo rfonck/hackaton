@@ -9,7 +9,7 @@ import "../styles/home.css";
 class Modalités extends React.Component{
   render(){
     return(
-      <div className="Profil background box-centre texte-centre">
+      <div className='Profil background box-centre texte-centre'>
       <div className='texte-titre texte-gris'>Schedule</div>
       <div className='radios'>
         <div className='radios-worked'>

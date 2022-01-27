@@ -9,8 +9,7 @@ import Modalités from './components/Modalités/Modalités';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Questionnaire_component/> */}
-    <Modalités/>
+    <Questionnaire_component/>
   </React.StrictMode>,
   document.getElementById('root')
 );
