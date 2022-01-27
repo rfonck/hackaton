@@ -1,0 +1,63 @@
+.popUpRank-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.popUpRank {
+    position: fixed;
+    width: 95%;
+    height: 70%;
+    background-color: white;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    color: black;
+    top: 15%;
+    left: 2.5%;
+    z-index: 1000;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(.8, -.5, .2, 1.4);
+    transform: translateY(100vh);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    text-align: center;
+}
+
+.medalsBox {
+    display: block;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 90%;
+    overflow: scroll;
+}
+
+.medalsBox > div > .medals {
+    width: 80px;
+}
+
+.medalsBox > div {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px
+}
+
+.imgFilmRank {
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.backgroundRank {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 70%;
+}
+
+.hideRank {
+    display: none;
+}

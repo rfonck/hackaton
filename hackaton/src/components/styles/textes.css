@@ -1,0 +1,29 @@
+.texte-blanc{
+color: #FFFFFF;
+}
+
+.texte-bouton{    
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.texte-vert{    
+    color: rgba(241, 55, 80, 1);
+}
+
+.texte-username{    
+    width: 100%;
+    float: clear;
+}
+
+.texte-vert::placeholder{
+    color: #5CDB95;
+}
+    
+.texte-centre{
+    text-align: center;
+}
+
+.texte-titre{
+    font-size:1000%;
+}
