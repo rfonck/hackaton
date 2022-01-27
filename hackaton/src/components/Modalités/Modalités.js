@@ -11,7 +11,7 @@ class Modalités extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      handleValidate: props.handleValidate
+      handleValidate: props.handleValidate            
     }
   }
   onTrigger = () => {
