@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Questionnaire_component from './components/Questionnaire_component/Questionnaire_component';
+import Modalités from './components/Modalités/Modalités';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Questionnaire_component/>
+    {/* <Questionnaire_component/> */}
+    <Modalités/>
   </React.StrictMode>,
   document.getElementById('root')
 );
