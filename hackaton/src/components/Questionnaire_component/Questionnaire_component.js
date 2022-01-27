@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Profil from '../Profil/Profil';
+import Moyens_de_transport from '../Moyens_de_transport/Moyens_de_transport';
 
 class Questionnaire_component extends React.Component {
   constructor(props) {
@@ -27,14 +28,14 @@ class Questionnaire_component extends React.Component {
   render() {
     return(
       <div className="questionnaire_component box-centre">
-        <Profil 
+        {/*<Profil 
             typeProfil = {this.state.typeProfil}
             regionTravail = {this.state.regionTravail}
             lieuHabitation = {this.state.lieuHabitation}
             lieuTravail = {this.state.lieuTravail}
             handleCallbackProfil = {this.handleCallbackProfil}>
-        </Profil>
-        <p>{this.state.lieuHabitation}</p>
+        </Profil> */}
+        <Moyens_de_transport></Moyens_de_transport>
       </div>
     )
   }
