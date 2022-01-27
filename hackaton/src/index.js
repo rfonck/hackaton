@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Questionnaire_component from './components/Questionnaire_component/Questionnaire_component';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Questionnaire_component/>
   </React.StrictMode>,
   document.getElementById('root')
 );
