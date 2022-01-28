@@ -138,7 +138,7 @@ class Profil extends React.Component {
         </select>
         <p></p>
         </div>
-        <hr></hr>
+        {/* <hr></hr>  */}
         <div
         className='bouton-gris-hover box-en-bas'
         >
@@ -148,8 +148,6 @@ class Profil extends React.Component {
           Valider
           </button>
         </div>
-        <div id="nouveau"> ### composant suivant ### </div>
-        <div>salut  {data}</div>
       </form>
   </div>
     );

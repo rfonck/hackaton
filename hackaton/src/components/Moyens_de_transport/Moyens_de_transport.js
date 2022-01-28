@@ -53,7 +53,7 @@ class Moyens_de_transport extends React.Component {
   render(){
     return(
     <div className="Profil background box-centre texte-centre">
-      <div className='texte-titre texte-gris'>Moyen(s) de transport</div>
+      <div className='texte-titre texte-gris'>Moyen de transport</div>
       <p></p>
       <form>
         Mode de transport : 

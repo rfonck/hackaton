@@ -34,10 +34,10 @@ class Modalités extends React.Component{
   render(){
     return(
       <div className='Profil background box-centre texte-centre'>
-      <div className='texte-titre texte-gris'>Schedule</div>
+      <div className='texte-titre texte-gris'>Emploi du temps</div>
       <div className='radios'>
         <div className='radios-worked'>
-          number of worked days per week
+          Jours travaillés par semaine
           <input type='radio' name='worked-days' value='1'/><label>1</label>
           <input type='radio' name='worked-days' value='2'/><label>2</label>
           <input type='radio' name='worked-days' value='3'/><label>3</label>
@@ -48,7 +48,7 @@ class Modalités extends React.Component{
         </div>
         <br/>
         <div className='radios-onsite'>
-          number of on site days per week
+          Jours en présentiel par semaine
           <input type='radio' name='onsite-days' value='0'/><label>0</label>
           <input type='radio' name='onsite-days' value='1'/><label>1</label>
           <input type='radio' name='onsite-days' value='2'/><label>2</label>
@@ -61,12 +61,12 @@ class Modalités extends React.Component{
       </div>
       <br/>
       <div className='bouton-gris-hover box-en-bas'>
-          <button 
-            className='bouton-gris-rempli'
-            onClick={this.onTrigger}>
-            Valider
-          </button>
-        </div>
+        <button 
+          className='bouton-gris-rempli'
+          onClick={this.onTrigger}>
+          Valider
+        </button>
+      </div>
 
       </div>
     )
