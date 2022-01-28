@@ -10,28 +10,43 @@ class Questionnaire_component extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      page: '0',
       typeProfil: 'commercial',
       regionTravail: 'france',
       lieuHabitation: 'ville',
       lieuTravail: 'ville',
-      page: '0'
+      numberWorkedDays: 0,
+      numberOnSiteDays: 0,
+      distanceTrajetKm: 0,
+      carrosserie: "berline",
+      appareilsConnectés: [],
+      data4gParMoisGb: 0,
+      nbSmsParJour: 0,
+      nbMailParJour: 0,
+      nbHeuresVisioParJour: 0
     }
   }
 
   handleCallbackProfil = (typeProfil, regionTravail, lieuHabitation, lieuTravail) =>{
-    console.log("dans parent")  
     this.setState({
       typeProfil: typeProfil,
       regionTravail: regionTravail,
       lieuHabitation: lieuHabitation,
       lieuTravail: lieuTravail
-  })
-    console.log("apres setstate")
+    })
+  }
+
+  handleCallbackModalités = (numberWorkedDays, numberOnSiteDays) =>{
+    this.setState({
+      numberWorkedDays: numberWorkedDays,
+      numberOnSiteDays: numberOnSiteDays
+    })
+    console.log("worked days: " + numberWorkedDays)
+    console.log("on site days: " + numberOnSiteDays)
   }
 
   handleValidate = () => {
     this.setState({page: ++this.state.page})
-    console.log(this.state.page)
   }
 
   render() {
@@ -49,7 +64,8 @@ class Questionnaire_component extends React.Component {
         }
         {this.state.page==1&&
         <Modalités
-        handleValidate = {this.handleValidate}>
+        handleValidate = {this.handleValidate}
+        handleCallbackModalités = {this.handleCallbackModalités}>
         </Modalités>
         }
         {this.state.page==2&&

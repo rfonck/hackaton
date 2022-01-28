@@ -11,11 +11,24 @@ class Modalités extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      handleValidate: props.handleValidate            
+      handleValidate: props.handleValidate,
+      handleCallbackModalités: props.handleCallbackModalités         
     }
   }
   onTrigger = () => {
     this.state.handleValidate()
+
+    var ele = document.getElementsByName('worked-days');
+    for(var i = 0; i < ele.length; i++) {
+      if(ele[i].checked){var workedDays=ele[i].value}
+    }
+
+    var ele2 = document.getElementsByName('onsite-days');
+    for(var i = 0; i < ele2.length; i++) {
+      if(ele2[i].checked){var onSiteDays=ele2[i].value}
+    }
+
+    this.state.handleCallbackModalités(workedDays,onSiteDays)
   }
 
   render(){
@@ -49,9 +62,9 @@ class Modalités extends React.Component{
       <br/>
       <div className='bouton-gris-hover box-en-bas'>
           <button 
-          className='bouton-gris-rempli'
-          onClick={this.onTrigger}>
-          Valider
+            className='bouton-gris-rempli'
+            onClick={this.onTrigger}>
+            Valider
           </button>
         </div>
 
