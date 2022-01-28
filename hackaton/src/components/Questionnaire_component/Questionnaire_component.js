@@ -5,6 +5,7 @@ import Modalités from '../Modalités/Modalités';
 import Moyens_de_transport from '../Moyens_de_transport/Moyens_de_transport';
 import Resultat_component from '../Resultat_component/Resultat_component';
 import Equipements from '../Equipements/Equipements';
+import { calculator } from '../../calculator/calculator';
 
 class Questionnaire_component extends React.Component {
   constructor(props) {
