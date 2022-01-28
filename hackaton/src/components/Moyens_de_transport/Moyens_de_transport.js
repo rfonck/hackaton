@@ -5,10 +5,34 @@ class Moyens_de_transport extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isValid: false
+      isValid: false,
+      isVoiture: 'false'
     }
+    this.eqco2 = 0;
+    this.wh = 0;
+    this.htmlString =  "<h1>coucou</h1>" ;
   }
 
+  saySomething = () => {
+    var valeur = document.getElementById("modeTransport"); 
+    if(valeur !== null)
+    {
+      console.log(valeur.value)
+      if(valeur.value =="voiture")
+      {
+        console.log("on est dans voiture")
+        this.setState(
+          {isVoiture: 'true'}
+        )
+        this.htmlString = "<h1>CC</h1>"
+        this.render()
+      }
+    }
+    else
+    {
+      console.log("c'est nul")
+    }
+  }
   render(){
     return(
     <div className="Profil background box-centre texte-centre">
@@ -16,9 +40,9 @@ class Moyens_de_transport extends React.Component {
       <p></p>
       <form>
         Mode de transport : 
-        <select 
-        onChange={this.changeModeTransport}
+        <select  
         id = "modeTransport"
+        onChange={this.saySomething}
         className='margin-left box-sans-contour texte-vert texte-centre'>
           <option value = "metro">Métro</option>
           <option value = "velo">Vélo</option>
@@ -38,13 +62,11 @@ class Moyens_de_transport extends React.Component {
           <input className='margin' type="number" id="distanceTrajet" name="name"></input>
           km(s)
         </div>
-
-        <div class="btn-group" role="group" aria-label="Basic example">
-          
-          <button type="button" class="btn btn-secondary">Vélo</button>
-          <button type="button" class="btn btn-secondary">Trottinette</button>
-        </div>
+          {this.state.html}
       </form>
+      {!this.state.isVoiture?
+      <div id="changingContent">{this.state.isVoiture}</div>
+      :<div id="changingContent">{this.state.isVoiture}</div>}
     </div>
     );
   }
