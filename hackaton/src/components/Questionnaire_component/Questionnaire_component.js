@@ -41,8 +41,13 @@ class Questionnaire_component extends React.Component {
       numberWorkedDays: numberWorkedDays,
       numberOnSiteDays: numberOnSiteDays
     })
-    console.log("worked days: " + numberWorkedDays)
-    console.log("on site days: " + numberOnSiteDays)
+  }
+
+  handleCallbackTransports = (distance, carrosserie) =>{
+    this.setState({
+      distance: distance,
+      carrosserie: carrosserie
+    })
   }
 
   handleValidate = () => {
@@ -70,7 +75,8 @@ class Questionnaire_component extends React.Component {
         }
         {this.state.page==2&&
         <Moyens_de_transport
-        handleValidate = {this.handleValidate}>
+        handleValidate = {this.handleValidate}
+        handleCallbackTransports= {this.handleCallbackTransports}>
         </Moyens_de_transport>
         }
         {this.state.page==3&&
