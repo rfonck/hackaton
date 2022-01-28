@@ -6,11 +6,12 @@ class Moyens_de_transport extends React.Component {
     super(props);
     this.state = {
       isValid: false,
-      isVoiture: 'false'
+      isVoiture: false
     }
     this.eqco2 = 0;
     this.wh = 0;
     this.htmlString =  "<h1>coucou</h1>" ;
+    this.emissions = [180.6, 158.75, 185.41, 202.19, 230.95, 270.71]
   }
 
   saySomething = () => {
@@ -22,11 +23,18 @@ class Moyens_de_transport extends React.Component {
       {
         console.log("on est dans voiture")
         this.setState(
-          {isVoiture: 'true'}
+          {isVoiture: true}
         )
         this.htmlString = "<h1>CC</h1>"
         this.render()
       }
+      else
+      {
+        this.setState(
+          {isVoiture: false}
+        )
+      }
+      
     }
     else
     {
@@ -66,7 +74,32 @@ class Moyens_de_transport extends React.Component {
       </form>
       {!this.state.isVoiture?
       <div id="changingContent">{this.state.isVoiture}</div>
-      :<div id="changingContent">{this.state.isVoiture}</div>}
+      :<div >
+      <br/> année de fabrication : 
+      <input id = "annee" label="année de fabrication"></input>
+      <br/> motorisation : 
+      <select   id="motorisation" label="motorisation"
+      className='margin-left box-sans-contour texte-vert texte-centre'>
+        <option value = "1">Electrique</option>
+        <option value = "2">Hybride rechargeable</option>
+        <option value = "3">Hybride non rechargeable</option>
+        <option value = "4">Thermique</option>
+      </select>
+      <br/>carrosserie : 
+      <select   id="carrosserie" label="carrosserie"
+      className='margin-left box-sans-contour texte-vert texte-centre'>
+        <option value = "1">Berline</option>
+        <option value = "2">Break</option>
+        <option value = "3">Tout-Terrains</option>
+        <option value = "4">Coupé / cabriolet</option>
+        <option value = "5">Monospace</option>
+        <option value = "6">Minibus</option>
+      </select>
+      <br/> 
+      <button className='bouton-gris-rempli'>
+        Valider
+        </button>
+    </div>}
     </div>
     );
   }
