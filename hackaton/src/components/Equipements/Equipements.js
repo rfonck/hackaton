@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Equipements.scss';
 import Equipement from '../Equipement/Equipement';
+import '../styles/input.css'
 
 class Equipements extends React.Component {
 
@@ -36,7 +37,7 @@ class Equipements extends React.Component {
 
   render() {
     return(
-      <div className="box-centre">
+      <div className="Profil background box-centre texte-centre">
         <h2>Sélectionnez vos appareils ménagers :</h2>
         
         <div className="gallery">
@@ -46,7 +47,7 @@ class Equipements extends React.Component {
           }
         </div>
 
-        <div className='bouton-gris-hover box-en-bas'>
+        <div className='bouton-gris-hover box-en-bas-a-droite'>
           <button 
           className='bouton-gris-rempli'
           onClick={this.onTrigger}>

@@ -3,12 +3,17 @@
 }
 
 .logo-equipement {
-	height: 200px;
-	width: 200px;
+	height: 150px;
+	width: 150px;
 }
 
 .name {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin: 0;
+}
+
+.box-en-bas-a-droite {
+	margin-left: 600px;
 }
