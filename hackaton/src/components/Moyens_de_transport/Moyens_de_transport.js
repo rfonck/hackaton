@@ -6,12 +6,17 @@ class Moyens_de_transport extends React.Component {
     super(props);
     this.state = {
       isValid: false,
-      isVoiture: false
+      isVoiture: false,
+      handleValidate: props.handleValidate
     }
     this.eqco2 = 0;
     this.wh = 0;
     this.htmlString =  "<h1>coucou</h1>" ;
     this.emissions = [180.6, 158.75, 185.41, 202.19, 230.95, 270.71]
+  }
+
+  onTrigger = () => {
+    this.state.handleValidate();
   }
 
   saySomething = () => {
@@ -96,10 +101,13 @@ class Moyens_de_transport extends React.Component {
         <option value = "6">Minibus</option>
       </select>
       <br/> 
-      <button className='bouton-gris-rempli'>
-        Valider
-        </button>
     </div>}
+    <br/>
+    <button 
+      className='bouton-gris-rempli'
+      onClick={this.onTrigger}>
+      Valider
+    </button>
     </div>
     );
   }
