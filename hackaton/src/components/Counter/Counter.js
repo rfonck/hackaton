@@ -14,12 +14,15 @@ class Counter extends React.Component {
 		this.setState({
 			count: this.state.count + 1
 		});
+		this.props.functionCount(++this.state.count)
 	}
 
 	decrementCount(){
 		this.setState({
 			count: this.state.count - 1
 		});
+		this.props.functionCount(++this.state.count)
+
 	}
 
 	render(){

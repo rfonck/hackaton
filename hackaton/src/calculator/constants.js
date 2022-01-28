@@ -20,9 +20,9 @@ export const regions = {
 
 
 export const consoEquipements = {
-    laptop: 45,
-    mobile_phone: 6,
+    portable: 45,
+    smartphone: 6,
     tablette: 21,
-    desktop: 174,
+    fixe: 174,
 }
 

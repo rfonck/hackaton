@@ -51,6 +51,16 @@ class Questionnaire_component extends React.Component {
     })
   }
 
+  handleCallbackEquipements = (appareils, data, sms, mail, TT) =>{
+    this.setState({
+      appareils: appareils,
+      data: data,
+      sms: sms,
+      mail: mail,
+      TT: TT
+    })
+  }
+
   handleValidate = () => {
     this.setState({page: ++this.state.page})
   }
@@ -82,7 +92,8 @@ class Questionnaire_component extends React.Component {
         }
         {this.state.page==3&&
         <Equipements
-        handleValidate = {this.handleValidate}>
+        handleValidate = {this.handleValidate}
+        handleCallbackEquipements= {this.handleCallbackEquipements}>
         </Equipements>
         }
         {this.state.page==4&&

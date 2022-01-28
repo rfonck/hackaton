@@ -13,7 +13,7 @@ class Equipement extends React.Component {
       <div>
         <img src={this.props.element.imagePath} className="logo-equipement"/>
         <h3 className="name">{this.props.element.name}</h3>
-        <Counter />
+        <Counter id={this.props.id} functionCount={this.props.functionCount}/>
       </div>
     )
   }
