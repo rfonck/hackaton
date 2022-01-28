@@ -20,17 +20,10 @@ class Equipements extends React.Component {
 
   static get elements() {
     return [
-      {name: 'Aspirateur', imagePath: require('../../assets/aspirateur.png')},
-      {name: 'Bouilloire', imagePath: require('../../assets/bouilloire.jpeg')},
-      {name: 'Cafetiere', imagePath: require('../../assets/cafetiere.jpg')},
-      {name: 'Congelateur', imagePath: require('../../assets/congelateur.jpg')},
-      {name: 'Fer à repasser', imagePath: require('../../assets/fer_a_repasser.jpeg')},
-      {name: 'Four', imagePath: require('../../assets/four.jpg')},
-      {name: 'Frigo', imagePath: require('../../assets/frigo.png')},
-      {name: 'Lave vaisselle', imagePath: require('../../assets/lave_vaisselle.jpg')},
-      {name: 'Machine à laver', imagePath: require('../../assets/machine_a_laver.jpg')},
-      {name: 'Micro-onde', imagePath: require('../../assets/micro-onde.jpeg')},
-      {name: 'Robot mixeur', imagePath: require('../../assets/robot_mixeur.jpg')}
+      {name: 'Ordinateur portable', imagePath: require('../../assets/aspirateur.png')},
+      {name: 'Ordinateur fixe', imagePath: require('../../assets/bouilloire.jpeg')},
+      {name: 'Smartphone', imagePath: require('../../assets/cafetiere.jpg')},
+      {name: 'Tablette', imagePath: require('../../assets/congelateur.jpg')}
     ]
 }
 
