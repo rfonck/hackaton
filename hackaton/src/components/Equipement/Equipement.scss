@@ -14,6 +14,27 @@
 	margin: 0;
 }
 
+.form-grid {
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 150px);
+    grid-gap: 50px;
+    margin-bottom: 30px;
+}
+
+.form-input {
+	margin-bottom: 15px;
+
+}
+
+.form-question {
+	margin-bottom: 15px;
+}
+
+.form-label {
+	margin-right: 20px;
+}
+
 .box-en-bas-a-droite {
 	margin-left: 600px;
 }

@@ -9,7 +9,11 @@ class Equipements extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      handleValidate: props.handleValidate            
+      handleValidate: props.handleValidate,
+      nbr_4g: 0,
+      nbr_sms: 0,
+      nbr_mail: 0,
+      nbr_visio: 0
     }
   }
 
@@ -17,13 +21,28 @@ class Equipements extends React.Component {
     this.state.handleValidate()
   }
 
+  handleChange4G = (e) => {
+    this.setState({ nbr_4g: e.target.value });
+  };
+
+  handleChangeSMS = (e) => {
+    this.setState({ nbr_sms: e.target.value });
+  };
+
+  handleChangeMail = (e) => {
+    this.setState({ nbr_mail: e.target.value });
+  };
+
+  handleChangeVisio = (e) => {
+    this.setState({ nbr_visio: e.target.value });
+  };
 
   static get elements() {
     return [
-      {name: 'Ordinateur portable', imagePath: require('../../assets/aspirateur.png')},
-      {name: 'Ordinateur fixe', imagePath: require('../../assets/bouilloire.jpeg')},
-      {name: 'Smartphone', imagePath: require('../../assets/cafetiere.jpg')},
-      {name: 'Tablette', imagePath: require('../../assets/congelateur.jpg')}
+      {name: 'Ordinateur portable', imagePath: require('../../assets/ordi_portable.jpg')},
+      {name: 'Ordinateur fixe', imagePath: require('../../assets/ordi_fixe.png')},
+      {name: 'Smartphone', imagePath: require('../../assets/smartphone.jpeg')},
+      {name: 'Tablette', imagePath: require('../../assets/tablette.jpg')}
     ]
 }
 
@@ -39,6 +58,37 @@ class Equipements extends React.Component {
               })
           }
         </div>
+        <div className="form-grid">
+          <div>
+            <div className="form-question">
+              <label className="form-label">Combien de Go de 4G utilisez-vous par mois ?</label>
+            </div>
+            <div className="form-question">
+              <label className="form-label">Combien de SMS envoyez-vous chaque jour ?</label>
+            </div>
+            <div className="form-question">
+              <label className="form-label">Combien de mail envoyez-vous chaque jour ?</label>
+            </div>
+            <div className="form-question">
+              <label className="form-label">Combien d'heure passez-vous en vision chaque jour ?</label>
+            </div>
+          </div>
+          <div>
+            <div className="form-input">
+              <input type="number" value={this.state.nbr_4g} onChange={this.handleChange4G}/>
+            </div>
+            <div className="form-input">
+              <input type="number" value={this.state.nbr_sms} onChange={this.handleChangeSMS}/>
+            </div>
+            <div className="form-input">
+              <input type="number" value={this.state.nbr_mail} onChange={this.handleChangeMail}/>
+            </div>
+            <div className="form-input">
+              <input type="number" value={this.state.nbr_visio} onChange={this.handleChangeVisio}/>
+            </div>
+          </div>
+        </div>
+        
 
         <div className='bouton-gris-hover box-en-bas-a-droite'>
           <button 

@@ -4,7 +4,7 @@
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 175px);
+    grid-template-rows: repeat(1, 250px);
     grid-gap: 100px;
     margin-bottom: 30px;
 }
