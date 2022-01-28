@@ -93,12 +93,12 @@ class Moyens_de_transport extends React.Component {
       <br/>carrosserie : 
       <select   id="carrosserie" label="carrosserie"
       className='margin-left box-sans-contour texte-vert texte-centre'>
-        <option value = "1">Berline</option>
-        <option value = "2">Break</option>
-        <option value = "3">Tout-Terrains</option>
-        <option value = "4">Coupé / cabriolet</option>
-        <option value = "5">Monospace</option>
-        <option value = "6">Minibus</option>
+        <option value = "berline">Berline</option>
+        <option value = "break">Break</option>
+        <option value = "tout-terrain">Tout-Terrains</option>
+        <option value = "cabriolet">Coupé / cabriolet</option>
+        <option value = "monospace">Monospace</option>
+        <option value = "minibus">Minibus</option>
       </select>
       <br/> 
     </div>}
