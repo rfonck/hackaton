@@ -38,10 +38,7 @@ class Equipements extends React.Component {
     for(var i=0; i<this.state.tablette;i++)
       appareils.push('tablette')
 
-    console.log(data)
-    console.log(sms)
-    console.log(mail)
-    console.log(visio)
+    console.log(appareils)
     this.state.handleCallbackEquipements(appareils,data,sms,mail,visio)
   }
 

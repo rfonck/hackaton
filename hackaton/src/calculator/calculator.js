@@ -1,7 +1,9 @@
 import {regions, vehiculeElectrique, consoEquipements} from './constants.js'
 
-export function calculator(typeProfil, region, nbJoursPrésentiel, typeVehicule, distance, equipements, nbData, nbSMS, nbMail, nbHeuresVisio) {
+export function calculator(region, nbJoursPrésentiel, typeVehicule, distance, equipements, nbData, nbSMS, nbMail, nbHeuresVisio) {
     
+    // console.log(region,nbJoursPrésentiel,typeVehicule,distance,equipements,nbData,nbSMS, nbMail, nbHeuresVisio)
+    // console.log(equipements)
     // Profil
     var consommation_region = regions[region];
     

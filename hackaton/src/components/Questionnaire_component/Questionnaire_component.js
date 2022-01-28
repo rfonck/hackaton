@@ -46,18 +46,18 @@ class Questionnaire_component extends React.Component {
 
   handleCallbackTransports = (distance, carrosserie) =>{
     this.setState({
-      distance: distance,
+      distanceTrajetKm: distance,
       carrosserie: carrosserie
     })
   }
 
   handleCallbackEquipements = (appareils, data, sms, mail, TT) =>{
     this.setState({
-      appareils: appareils,
-      data: data,
-      sms: sms,
-      mail: mail,
-      TT: TT
+      appareilsConnectés: appareils,
+      data4gParMoisGb: data,
+      nbSmsParJour: sms,
+      nbMailParJour: mail,
+      nbHeuresVisioParJour: TT
     })
   }
 
@@ -98,7 +98,18 @@ class Questionnaire_component extends React.Component {
         }
         {this.state.page==4&&
         <Resultat_component
-        handleValidate = {this.handleValidate}>
+        handleValidate = {this.handleValidate}
+        resultat = {calculator(
+          this.state.regionTravail,
+          this.state.numberOnSiteDays,
+          this.state.carrosserie,
+          this.state.distanceTrajetKm,
+          this.state.Equipements,
+          this.state.data4gParMoisGb,
+          this.state.nbSmsParJour,
+          this.state.nbMailParJour,
+          this.state.nbHeuresVisioParJour 
+        )}>
         </Resultat_component>
         }
         {/* <div className='bouton-gris-hover box-en-bas'>
