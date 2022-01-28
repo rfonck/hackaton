@@ -1,0 +1,22 @@
+.counter {
+	margin: auto;
+	text-align: center;
+}
+
+.counter h1 {
+	margin: 0;
+	padding: 20px;
+	font-size: 36px;
+	display: inline-block;
+}
+
+.counter button {
+	//background: grey;
+	border: 0;
+	padding: 10px;
+	margin: 10px 5px 0 5px;
+	outline: none;
+	border-radius: 3px;
+	font-weight: bold;
+	display: inline-block;
+}
