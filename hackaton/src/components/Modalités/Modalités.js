@@ -35,6 +35,7 @@ class Modalités extends React.Component{
     return(
       <div className='Profil background box-centre texte-centre'>
       <div className='texte-titre texte-gris'>Emploi du temps</div>
+      <br/>
       <div className='radios'>
         <div className='radios-worked'>
           Jours travaillés par semaine
