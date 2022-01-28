@@ -7,7 +7,8 @@ class Moyens_de_transport extends React.Component {
     this.state = {
       isValid: false,
       isVoiture: false,
-      handleValidate: props.handleValidate
+      handleValidate: props.handleValidate,
+      handleCallbackTransports: props.handleCallbackTransports
     }
     this.eqco2 = 0;
     this.wh = 0;
@@ -16,7 +17,10 @@ class Moyens_de_transport extends React.Component {
   }
 
   onTrigger = () => {
-    this.state.handleValidate();
+    this.state.handleValidate()
+    var distance = document.getElementById('distanceTrajet').value;
+    var carroserie = document.getElementById('carrosserie').value;
+    this.state.handleCallbackTransports(distance, carroserie)
   }
 
   saySomething = () => {
