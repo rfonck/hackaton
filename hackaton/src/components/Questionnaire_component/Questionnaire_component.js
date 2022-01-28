@@ -65,6 +65,7 @@ class Questionnaire_component extends React.Component {
         {this.state.page==4&&
         <Resultat_component
         handleValidate = {this.handleValidate}>
+        resultats = {this.resultats}
         </Resultat_component>
         }
         {/* <div className='bouton-gris-hover box-en-bas'>
